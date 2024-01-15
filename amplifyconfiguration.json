@@ -1,11 +1,13 @@
 {
   "aws_project_region": "us-east-1",
-  "aws_user_pools_id": "us-east-1_Dwgehk506",
+  "aws_user_pools_id": "us-east-1_fCMm0qoJq",
   "aws_cognito_region": "us-east-1",
-  "aws_user_pools_web_client_id": "49hvabfn0u6ghbav4ffc00e2dg",
-  "aws_cognito_identity_pool_id": "us-east-1:dbd9a35d-10c6-4850-be29-78c309dfd6b6",
+  "aws_user_pools_web_client_id": "12f40l62afr4khaj3gcaj0j9fk",
+  "aws_cognito_identity_pool_id": "us-east-1:bb93ae54-7c92-42dd-a7b2-5388780ee15f",
   "aws_cognito_signup_attributes": [
-    "EMAIL"
+    "EMAIL",
+    "PHONE_NUMBER",
+    "BIRTHDATE"
   ],
   "aws_cognito_username_attributes": [
     "EMAIL"
@@ -22,7 +24,7 @@
       "REQUIRES_SYMBOLS"
     ]
   },
-  "aws_appsync_graphqlEndpoint": "https://xwa2omkmazacngsj6bhwrg745y.appsync-api.us-east-1.amazonaws.com/graphql",
+  "aws_appsync_graphqlEndpoint": "https://4i3fufwgxrbbdoz22fdxrrbf4y.appsync-api.us-east-1.amazonaws.com/graphql",
   "aws_appsync_region": "us-east-1",
   "aws_appsync_authenticationType": "AMAZON_COGNITO_USER_POOLS",
   "aws_appsync_additionalAuthenticationTypes": "AWS_IAM",

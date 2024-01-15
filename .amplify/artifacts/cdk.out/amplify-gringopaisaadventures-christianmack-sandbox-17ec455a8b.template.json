@@ -73,7 +73,7 @@
    }
   },
   "signupAttributes": {
-   "Value": "[\"EMAIL\"]"
+   "Value": "[\"EMAIL\",\"PHONE_NUMBER\",\"BIRTHDATE\"]"
   },
   "usernameAttributes": {
    "Value": "[\"EMAIL\"]"
@@ -152,7 +152,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/af3532aa022afc6bf611224e7cf5c61e42836f770c6eea9f655133b20aaea304.json"
+       "/1049e0b9baa021e706ccedc9e6f3a8a66df25038cc7803292e41c4dfe0487032.json"
       ]
      ]
     }
