@@ -10,12 +10,6 @@ const client = generateClient<Schema>();
 export default function TodoList() {
   const [todos, setTodos] = useState<Schema["Todo"][]>([]);
 
-  //   async function listTodos() {
-  //     // fetch all todos
-  //     const { data } = await client.models.Todo.list();
-  //     setTodos(data);
-  //   }
-
   useEffect(() => {
     const sub = client.models.Todo.observeQuery().subscribe(({ items }) =>
       setTodos([...items])
