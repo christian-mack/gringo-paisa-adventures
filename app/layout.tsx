@@ -26,8 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ConfigureAmplifyClientSide />
-      <Toaster />
-      <body className={poppins.variable}>{children}</body>
+      <body className={poppins.variable}>
+        <Toaster />
+        {children}
+      </body>
     </html>
   );
 }

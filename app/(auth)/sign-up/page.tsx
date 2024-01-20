@@ -63,10 +63,6 @@ function SignUp() {
           autoSignIn: true, // or SignInOptions e.g { authFlowType: "USER_SRP_AUTH" }
         },
       });
-
-      console.log(userId, isSignUpComplete, nextStep);
-      nextStep.signUpStep === "CONFIRM_SIGN_UP" &&
-        redirect("/sign-up/confirmation");
     } catch (error) {
       console.log("error signing up:", error);
       toast({
@@ -74,6 +70,8 @@ function SignUp() {
         description: `${error}`,
         variant: "destructive",
       });
+    } finally {
+      redirect("/sign-up/confirmation");
     }
   }
 

@@ -2,7 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { confirmSignUp } from "@aws-amplify/auth";
+import { confirmSignUp, type ConfirmSignUpInput } from "@aws-amplify/auth";
 import * as z from "zod";
 import {
   Form,
@@ -16,13 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
-import { Router } from "next/router";
 import { redirect } from "next/navigation";
-
-type ConfirmSignUpParameters = {
-  username: string;
-  confirmationCode: string;
-};
 
 const formSchema = z.object({
   username: z.string(),
@@ -43,7 +37,7 @@ function SignUp() {
   async function handleSignUpConfirmation({
     username,
     confirmationCode,
-  }: ConfirmSignUpParameters) {
+  }: ConfirmSignUpInput) {
     try {
       const { isSignUpComplete, nextStep } = await confirmSignUp({
         username,
