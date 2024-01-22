@@ -5,6 +5,9 @@ import { Button } from "../ui/button";
 import { signOut, deleteUser } from "@aws-amplify/auth";
 import { useAuthStore } from "@/hooks/state/authStore";
 import { useToast } from "../ui/use-toast";
+import NavItems from "./MainNav";
+import MainNav from "./MainNav";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   const { toast } = useToast();
@@ -42,35 +45,37 @@ const Header = () => {
   return (
     <header className="w-full border-b">
       <div className="wrapper flex items-center justify-between">
-        <Link href="/" className="w-36">
+        <Link href="/" className="w-20">
           <Image
-            src="/assets/images/logo.svg"
+            src="/assets/images/logo.png"
             width={128}
             height={38}
             alt="gringo paisa adventures logo"
           />
         </Link>
 
-        <div className="flex w-32 justify-end gap-3">
-          {!user.isAuthenticated && (
-            <>
-              <Button>
-                <Link href="/login">Login</Link>
-              </Button>
-              <Button>
-                <Link href="/sign-up">Sign Up</Link>
-              </Button>
-            </>
-          )}
+        <MainNav />
 
-          {user.isAuthenticated && (
+        <div className="flex justify-end gap-3">
+          {user.isAuthenticated ? (
             <>
               <Button onClick={handleSignOut}>Logout</Button>
               <Button variant="destructive" onClick={handleDeleteUser}>
                 Delete User
               </Button>
             </>
+          ) : (
+            <>
+              <Button>
+                <Link href="/login">Login</Link>
+              </Button>
+              <Button>
+                <Link href="/sign-up">Get Started</Link>
+              </Button>
+            </>
           )}
+
+          <MobileNav />
         </div>
       </div>
     </header>
