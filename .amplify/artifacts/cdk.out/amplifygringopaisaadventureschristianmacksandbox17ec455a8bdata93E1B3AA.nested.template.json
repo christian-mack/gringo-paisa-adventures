@@ -35,7 +35,7 @@
      ]
     },
     "DefinitionS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/d8791195db8414dd731a9f0f10ab95d00f667560f11bcc4f5b347a69aae25ff4.graphql"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/a21864fdf5c679fe01a9fbe6a917d56445c751c643d91be6eb1c9a56e9610742.graphql"
     }
    },
    "Metadata": {
@@ -99,7 +99,7 @@
     "aws:asset:property": "TemplateURL"
    }
   },
-  "amplifyDataTodoNestedStackTodoNestedStackResource551CEA56": {
+  "amplifyDataEventNestedStackEventNestedStackResourceE9D0FB99": {
    "Type": "AWS::CloudFormation::Stack",
    "Properties": {
     "Parameters": {
@@ -162,7 +162,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/98686b2e0c9b825e8ed99bab4630ab4a773fefe68f391b1fd50873a73f28b86f.json"
+       "/d89d11a2449fe7ebd8b4c9e7be416f73e8263d3ec9e0ba75d53e31accb82ac1c.json"
       ]
      ]
     }
@@ -173,8 +173,8 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Todo.NestedStack/Todo.NestedStackResource",
-    "aws:asset:path": "amplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataTodoC4BF004D.nested.template.json",
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event.NestedStack/Event.NestedStackResource",
+    "aws:asset:path": "amplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataEventCFF6B717.nested.template.json",
     "aws:asset:property": "TemplateURL"
    }
   },
@@ -308,7 +308,7 @@
      }
     ],
     "SourceObjectKeys": [
-     "e01f69f1b0dff5d9bcace41fadfee749883eb5fd3e8fc1ab1e35edded5d64486.zip"
+     "386c0020d3da5a5eade1c5f52f8bebbb11e2651e99374d530c2b0d002b1f253f.zip"
     ],
     "SourceMarkers": [
      {}

@@ -1,0 +1,2174 @@
+{
+ "Parameters": {
+  "DynamoDBModelTableReadIOPS": {
+   "Type": "Number",
+   "Default": 5,
+   "Description": "The number of read IOPS the table should support."
+  },
+  "DynamoDBModelTableWriteIOPS": {
+   "Type": "Number",
+   "Default": 5,
+   "Description": "The number of write IOPS the table should support."
+  },
+  "DynamoDBBillingMode": {
+   "Type": "String",
+   "Default": "PAY_PER_REQUEST",
+   "AllowedValues": [
+    "PAY_PER_REQUEST",
+    "PROVISIONED"
+   ],
+   "Description": "Configure @model types to create DynamoDB tables with PAY_PER_REQUEST or PROVISIONED billing modes."
+  },
+  "DynamoDBEnablePointInTimeRecovery": {
+   "Type": "String",
+   "Default": "false",
+   "AllowedValues": [
+    "true",
+    "false"
+   ],
+   "Description": "Whether to enable Point in Time Recovery on the table."
+  },
+  "DynamoDBEnableServerSideEncryption": {
+   "Type": "String",
+   "Default": "true",
+   "AllowedValues": [
+    "true",
+    "false"
+   ],
+   "Description": "Enable server side encryption powered by KMS."
+  },
+  "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource6A3F2E6EOutputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyData54447D23": {
+   "Type": "String"
+  },
+  "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId": {
+   "Type": "String"
+  },
+  "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name": {
+   "Type": "String"
+  },
+  "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthauthenticatedUserRoleD9F96B5CRef": {
+   "Type": "String"
+  },
+  "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthunauthenticatedUserRole1864BB59Ref": {
+   "Type": "String"
+  },
+  "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthIdentityPoolE7661338Ref": {
+   "Type": "String"
+  }
+ },
+ "Conditions": {
+  "HasEnvironmentParameter": {
+   "Fn::Not": [
+    {
+     "Fn::Equals": [
+      "NONE",
+      "NONE"
+     ]
+    }
+   ]
+  },
+  "ShouldUseServerSideEncryption": {
+   "Fn::Equals": [
+    {
+     "Ref": "DynamoDBEnableServerSideEncryption"
+    },
+    "true"
+   ]
+  },
+  "ShouldUsePayPerRequestBilling": {
+   "Fn::Equals": [
+    {
+     "Ref": "DynamoDBBillingMode"
+    },
+    "PAY_PER_REQUEST"
+   ]
+  },
+  "ShouldUsePointInTimeRecovery": {
+   "Fn::Equals": [
+    {
+     "Ref": "DynamoDBEnablePointInTimeRecovery"
+    },
+    "true"
+   ]
+  },
+  "CDKMetadataAvailable": {
+   "Fn::Or": [
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "af-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ca-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-northwest-1"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-3"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "il-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "sa-east-1"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-west-2"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Resources": {
+  "EventTable": {
+   "Type": "Custom::AmplifyDynamoDBTable",
+   "Properties": {
+    "ServiceToken": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource6A3F2E6EOutputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyData54447D23"
+    },
+    "tableName": {
+     "Fn::Join": [
+      "",
+      [
+       "Event-",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+       },
+       "-NONE"
+      ]
+     ]
+    },
+    "attributeDefinitions": [
+     {
+      "attributeName": "id",
+      "attributeType": "S"
+     }
+    ],
+    "keySchema": [
+     {
+      "attributeName": "id",
+      "keyType": "HASH"
+     }
+    ],
+    "provisionedThroughput": {
+     "Fn::If": [
+      "ShouldUsePayPerRequestBilling",
+      {
+       "Ref": "AWS::NoValue"
+      },
+      {
+       "ReadCapacityUnits": {
+        "Ref": "DynamoDBModelTableReadIOPS"
+       },
+       "WriteCapacityUnits": {
+        "Ref": "DynamoDBModelTableWriteIOPS"
+       }
+      }
+     ]
+    },
+    "sseSpecification": {
+     "sseEnabled": {
+      "Fn::If": [
+       "ShouldUseServerSideEncryption",
+       true,
+       false
+      ]
+     }
+    },
+    "streamSpecification": {
+     "streamViewType": "NEW_AND_OLD_IMAGES"
+    },
+    "allowDestructiveGraphqlSchemaUpdates": false,
+    "replaceTableUponGsiUpdate": false,
+    "pointInTimeRecoverySpecification": {
+     "Fn::If": [
+      "ShouldUsePointInTimeRecovery",
+      {
+       "PointInTimeRecoveryEnabled": true
+      },
+      {
+       "Ref": "AWS::NoValue"
+      }
+     ]
+    },
+    "billingMode": {
+     "Fn::If": [
+      "ShouldUsePayPerRequestBilling",
+      "PAY_PER_REQUEST",
+      {
+       "Ref": "AWS::NoValue"
+      }
+     ]
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/EventTable/Default/Default"
+   }
+  },
+  "EventIAMRole0BCE77B0": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "appsync.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "RoleName": {
+     "Fn::Join": [
+      "",
+      [
+       "EventIAMRole09f500-",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+       },
+       "-NONE"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/EventIAMRole/Resource"
+   }
+  },
+  "EventIAMRoleDefaultPolicy53772390": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "dynamodb:BatchGetItem",
+        "dynamodb:GetRecords",
+        "dynamodb:GetShardIterator",
+        "dynamodb:Query",
+        "dynamodb:GetItem",
+        "dynamodb:Scan",
+        "dynamodb:ConditionCheckItem",
+        "dynamodb:BatchWriteItem",
+        "dynamodb:PutItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:DeleteItem",
+        "dynamodb:DescribeTable"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "EventTable",
+          "TableArn"
+         ]
+        },
+        {
+         "Ref": "AWS::NoValue"
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "EventIAMRoleDefaultPolicy53772390",
+    "Roles": [
+     {
+      "Ref": "EventIAMRole0BCE77B0"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/EventIAMRole/DefaultPolicy/Resource"
+   }
+  },
+  "DynamoDBAccess71ABE5AE": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "dynamodb:BatchGetItem",
+        "dynamodb:BatchWriteItem",
+        "dynamodb:PutItem",
+        "dynamodb:DeleteItem",
+        "dynamodb:GetItem",
+        "dynamodb:Scan",
+        "dynamodb:Query",
+        "dynamodb:UpdateItem"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Sub": [
+          "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${tablename}",
+          {
+           "tablename": {
+            "Fn::Join": [
+             "",
+             [
+              "Event-",
+              {
+               "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+              },
+              "-NONE"
+             ]
+            ]
+           }
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${tablename}/*",
+          {
+           "tablename": {
+            "Fn::Join": [
+             "",
+             [
+              "Event-",
+              {
+               "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+              },
+              "-NONE"
+             ]
+            ]
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "DynamoDBAccess71ABE5AE",
+    "Roles": [
+     {
+      "Ref": "EventIAMRole0BCE77B0"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/DynamoDBAccess/Resource"
+   }
+  },
+  "EventDataSource": {
+   "Type": "AWS::AppSync::DataSource",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DynamoDBConfig": {
+     "AwsRegion": {
+      "Ref": "AWS::Region"
+     },
+     "TableName": {
+      "Fn::Select": [
+       1,
+       {
+        "Fn::Split": [
+         "/",
+         {
+          "Fn::Select": [
+           5,
+           {
+            "Fn::Split": [
+             ":",
+             {
+              "Fn::GetAtt": [
+               "EventTable",
+               "TableArn"
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "Name": "EventTable",
+    "ServiceRoleArn": {
+     "Fn::GetAtt": [
+      "EventIAMRole0BCE77B0",
+      "Arn"
+     ]
+    },
+    "Type": "AMAZON_DYNAMODB"
+   },
+   "DependsOn": [
+    "EventIAMRole0BCE77B0"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/EventDataSource/Resource"
+   }
+  },
+  "QuerygetEventpreAuth0FunctionQuerygetEventpreAuth0FunctionAppSyncFunctionB2D20B1C": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetEventpreAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/ffc597e18023b530e6afcbe02cee647d49550fa9e77bd06f1dee09d8b1be8de3.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/QuerygetEventpreAuth0Function/QuerygetEventpreAuth0Function.AppSyncFunction"
+   }
+  },
+  "QuerygetEventauth0FunctionQuerygetEventauth0FunctionAppSyncFunctionC3204A94": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetEventauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/70eb21f5725a54e724b59decd74dbf2943ebfa0372258cc221dfbac95f306637.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/QuerygetEventauth0Function/QuerygetEventauth0Function.AppSyncFunction"
+   }
+  },
+  "QuerygetEventpostAuth0FunctionQuerygetEventpostAuth0FunctionAppSyncFunction4F14B5E1": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetEventpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3a607c80c325a3edcae10503ccceaaad8e73d3447432eceba2dab95a3a1c4665.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/QuerygetEventpostAuth0Function/QuerygetEventpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "QueryGetEventDataResolverFnQueryGetEventDataResolverFnAppSyncFunction166EAEFB": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "EventDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QueryGetEventDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/08f4d557693d96c1a4efba0f9dc91330e4b19772fd5477c156468843e3d9cb5e.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4c6a2d29f01c6091bd1d9afe16e5849d456c96f17c3b215938c8067399532719.vtl"
+    }
+   },
+   "DependsOn": [
+    "EventDataSource"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/QueryGetEventDataResolverFn/QueryGetEventDataResolverFn.AppSyncFunction"
+   }
+  },
+  "GetEventResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "FieldName": "getEvent",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "QuerygetEventpreAuth0FunctionQuerygetEventpreAuth0FunctionAppSyncFunctionB2D20B1C",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QuerygetEventauth0FunctionQuerygetEventauth0FunctionAppSyncFunctionC3204A94",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QuerygetEventpostAuth0FunctionQuerygetEventpostAuth0FunctionAppSyncFunction4F14B5E1",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QueryGetEventDataResolverFnQueryGetEventDataResolverFnAppSyncFunction166EAEFB",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Query\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"getEvent\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "EventTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthauthenticatedUserRoleD9F96B5CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthunauthenticatedUserRole1864BB59Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthIdentityPoolE7661338Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Query"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/queryGetEventResolver"
+   }
+  },
+  "QuerylistEventspreAuth0FunctionQuerylistEventspreAuth0FunctionAppSyncFunctionCB79CC10": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistEventspreAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3e81312d4c75951808eda9fcd5f854c1925c0b819de0939f09c4fe2eebb190b8.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/QuerylistEventspreAuth0Function/QuerylistEventspreAuth0Function.AppSyncFunction"
+   }
+  },
+  "QuerylistEventsauth0FunctionQuerylistEventsauth0FunctionAppSyncFunctionD4D927FE": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistEventsauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/70eb21f5725a54e724b59decd74dbf2943ebfa0372258cc221dfbac95f306637.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/QuerylistEventsauth0Function/QuerylistEventsauth0Function.AppSyncFunction"
+   }
+  },
+  "QuerylistEventspostAuth0FunctionQuerylistEventspostAuth0FunctionAppSyncFunction998DAA8E": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistEventspostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3a607c80c325a3edcae10503ccceaaad8e73d3447432eceba2dab95a3a1c4665.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/QuerylistEventspostAuth0Function/QuerylistEventspostAuth0Function.AppSyncFunction"
+   }
+  },
+  "QueryListEventsDataResolverFnQueryListEventsDataResolverFnAppSyncFunctionBEF0CD57": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "EventDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QueryListEventsDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3665466abf40cc747bff935f1cf2f49edd920e2cd12d45d502d3857488b3ff3e.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/cc01911d0269d4080ea57505dc445dfc315ef7ad85d3d9d4ea1357858bff451d.vtl"
+    }
+   },
+   "DependsOn": [
+    "EventDataSource"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/QueryListEventsDataResolverFn/QueryListEventsDataResolverFn.AppSyncFunction"
+   }
+  },
+  "ListEventResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "FieldName": "listEvents",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "QuerylistEventspreAuth0FunctionQuerylistEventspreAuth0FunctionAppSyncFunctionCB79CC10",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QuerylistEventsauth0FunctionQuerylistEventsauth0FunctionAppSyncFunctionD4D927FE",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QuerylistEventspostAuth0FunctionQuerylistEventspostAuth0FunctionAppSyncFunction998DAA8E",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QueryListEventsDataResolverFnQueryListEventsDataResolverFnAppSyncFunctionBEF0CD57",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Query\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"listEvents\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "EventTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthauthenticatedUserRoleD9F96B5CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthunauthenticatedUserRole1864BB59Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthIdentityPoolE7661338Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Query"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/queryListEventsResolver"
+   }
+  },
+  "MutationcreateEventinit0FunctionMutationcreateEventinit0FunctionAppSyncFunctionC9CB5B8C": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateEventinit0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/01dd50f40481ed4d3b0fb1a5f22dbe631b252847144e59c565ad3874813dc77c.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationcreateEventinit0Function/MutationcreateEventinit0Function.AppSyncFunction"
+   }
+  },
+  "MutationcreateEventinit1FunctionMutationcreateEventinit1FunctionAppSyncFunctionF94BDF0F": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateEventinit1Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/92d095b0e63722dd7e2addfaa06a82e485b76c1450bd23f454c74c0d65427c71.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationcreateEventinit1Function/MutationcreateEventinit1Function.AppSyncFunction"
+   }
+  },
+  "MutationcreateEventpreAuth0FunctionMutationcreateEventpreAuth0FunctionAppSyncFunction24325CB3": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateEventpreAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/39fb35c6f8e8573ffe3a63ba867cf543b05af129a104b387a44f03c3d85da0c3.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationcreateEventpreAuth0Function/MutationcreateEventpreAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationcreateEventauth0FunctionMutationcreateEventauth0FunctionAppSyncFunction8F6C6CF0": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateEventauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c612014329a4fda8fd0e94afbdd4ad800c9f11155a136f42472bb04e0252603d.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationcreateEventauth0Function/MutationcreateEventauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationcreateEventpostAuth0FunctionMutationcreateEventpostAuth0FunctionAppSyncFunction0D3026B8": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateEventpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3a607c80c325a3edcae10503ccceaaad8e73d3447432eceba2dab95a3a1c4665.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationcreateEventpostAuth0Function/MutationcreateEventpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationCreateEventDataResolverFnMutationCreateEventDataResolverFnAppSyncFunction560A2A89": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "EventDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationCreateEventDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/b9305b8671dd17e13985243a6e1ce4b11de6ea446c15a9e76caeeb92800da150.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "EventDataSource"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationCreateEventDataResolverFn/MutationCreateEventDataResolverFn.AppSyncFunction"
+   }
+  },
+  "CreateEventResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "FieldName": "createEvent",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationcreateEventinit0FunctionMutationcreateEventinit0FunctionAppSyncFunctionC9CB5B8C",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationcreateEventinit1FunctionMutationcreateEventinit1FunctionAppSyncFunctionF94BDF0F",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationcreateEventpreAuth0FunctionMutationcreateEventpreAuth0FunctionAppSyncFunction24325CB3",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationcreateEventauth0FunctionMutationcreateEventauth0FunctionAppSyncFunction8F6C6CF0",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationcreateEventpostAuth0FunctionMutationcreateEventpostAuth0FunctionAppSyncFunction0D3026B8",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationCreateEventDataResolverFnMutationCreateEventDataResolverFnAppSyncFunction560A2A89",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"createEvent\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "EventTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthauthenticatedUserRoleD9F96B5CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthunauthenticatedUserRole1864BB59Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthIdentityPoolE7661338Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/mutationCreateEventResolver"
+   }
+  },
+  "MutationupdateEventinit0FunctionMutationupdateEventinit0FunctionAppSyncFunction2E3C4B4D": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateEventinit0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/06db846fd14e6fc371f22b12b5545ba8e2dbfeda85d8c8d586c71c282166657b.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationupdateEventinit0Function/MutationupdateEventinit0Function.AppSyncFunction"
+   }
+  },
+  "MutationupdateEventpreAuth0FunctionMutationupdateEventpreAuth0FunctionAppSyncFunctionC680976C": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateEventpreAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/39fb35c6f8e8573ffe3a63ba867cf543b05af129a104b387a44f03c3d85da0c3.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationupdateEventpreAuth0Function/MutationupdateEventpreAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationupdateEventauth0FunctionMutationupdateEventauth0FunctionAppSyncFunctionE49A08BF": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "EventDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateEventauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/90a737fb9525a559b74f66bcd5b982df0e825ae3c01741b4b4743378bc323078.vtl"
+    }
+   },
+   "DependsOn": [
+    "EventDataSource"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationupdateEventauth0Function/MutationupdateEventauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationupdateEventpostAuth0FunctionMutationupdateEventpostAuth0FunctionAppSyncFunction5A48AC03": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateEventpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3a607c80c325a3edcae10503ccceaaad8e73d3447432eceba2dab95a3a1c4665.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationupdateEventpostAuth0Function/MutationupdateEventpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationUpdateEventDataResolverFnMutationUpdateEventDataResolverFnAppSyncFunctionCDE413A4": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "EventDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationUpdateEventDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/474bf0776ec2164a13191d1a0a9e057154931e4918fea5086f49850d02a5371b.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "EventDataSource"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationUpdateEventDataResolverFn/MutationUpdateEventDataResolverFn.AppSyncFunction"
+   }
+  },
+  "UpdateEventResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "FieldName": "updateEvent",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationupdateEventinit0FunctionMutationupdateEventinit0FunctionAppSyncFunction2E3C4B4D",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationupdateEventpreAuth0FunctionMutationupdateEventpreAuth0FunctionAppSyncFunctionC680976C",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationupdateEventauth0FunctionMutationupdateEventauth0FunctionAppSyncFunctionE49A08BF",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationupdateEventpostAuth0FunctionMutationupdateEventpostAuth0FunctionAppSyncFunction5A48AC03",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationUpdateEventDataResolverFnMutationUpdateEventDataResolverFnAppSyncFunctionCDE413A4",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"updateEvent\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "EventTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthauthenticatedUserRoleD9F96B5CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthunauthenticatedUserRole1864BB59Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthIdentityPoolE7661338Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/mutationUpdateEventResolver"
+   }
+  },
+  "MutationdeleteEventpreAuth0FunctionMutationdeleteEventpreAuth0FunctionAppSyncFunctionC0EDC562": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeleteEventpreAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/a2c0f8a4d76f659d130c8a445801845ae9d33e5cc2c5ecd610edc272d4bd46e3.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationdeleteEventpreAuth0Function/MutationdeleteEventpreAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationdeleteEventauth0FunctionMutationdeleteEventauth0FunctionAppSyncFunction48579C66": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "EventDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeleteEventauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/b2fcea30c3ec12ed0a578aaa1157b50ba473991d002dc784d5da101d3396b772.vtl"
+    }
+   },
+   "DependsOn": [
+    "EventDataSource"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationdeleteEventauth0Function/MutationdeleteEventauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationdeleteEventpostAuth0FunctionMutationdeleteEventpostAuth0FunctionAppSyncFunctionF9B6EEC3": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeleteEventpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3a607c80c325a3edcae10503ccceaaad8e73d3447432eceba2dab95a3a1c4665.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationdeleteEventpostAuth0Function/MutationdeleteEventpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationDeleteEventDataResolverFnMutationDeleteEventDataResolverFnAppSyncFunctionB1DACFF3": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "EventDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationDeleteEventDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4f7907d1209a2c9953a0c053df402c634e359546d70c7cc5c2e8e21ea734880f.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "EventDataSource"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/MutationDeleteEventDataResolverFn/MutationDeleteEventDataResolverFn.AppSyncFunction"
+   }
+  },
+  "DeleteEventResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "FieldName": "deleteEvent",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationdeleteEventpreAuth0FunctionMutationdeleteEventpreAuth0FunctionAppSyncFunctionC0EDC562",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationdeleteEventauth0FunctionMutationdeleteEventauth0FunctionAppSyncFunction48579C66",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationdeleteEventpostAuth0FunctionMutationdeleteEventpostAuth0FunctionAppSyncFunctionF9B6EEC3",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationDeleteEventDataResolverFnMutationDeleteEventDataResolverFnAppSyncFunctionB1DACFF3",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"deleteEvent\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "EventTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthauthenticatedUserRoleD9F96B5CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthunauthenticatedUserRole1864BB59Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthIdentityPoolE7661338Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/mutationDeleteEventResolver"
+   }
+  },
+  "SubscriptiononCreateEventauth0FunctionSubscriptiononCreateEventauth0FunctionAppSyncFunction1E65C7F0": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononCreateEventauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/a33be6f506e64297711c096ec4876f62066b49ce3821c88f97239286ed3540af.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/SubscriptiononCreateEventauth0Function/SubscriptiononCreateEventauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononCreateEventpostAuth0FunctionSubscriptiononCreateEventpostAuth0FunctionAppSyncFunction324A45FB": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononCreateEventpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3a607c80c325a3edcae10503ccceaaad8e73d3447432eceba2dab95a3a1c4665.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/SubscriptiononCreateEventpostAuth0Function/SubscriptiononCreateEventpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnCreateEventDataResolverFnSubscriptionOnCreateEventDataResolverFnAppSyncFunctionED0B96EA": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnCreateEventDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/SubscriptionOnCreateEventDataResolverFn/SubscriptionOnCreateEventDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononCreateEventResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "FieldName": "onCreateEvent",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononCreateEventauth0FunctionSubscriptiononCreateEventauth0FunctionAppSyncFunction1E65C7F0",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononCreateEventpostAuth0FunctionSubscriptiononCreateEventpostAuth0FunctionAppSyncFunction324A45FB",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnCreateEventDataResolverFnSubscriptionOnCreateEventDataResolverFnAppSyncFunctionED0B96EA",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onCreateEvent\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthauthenticatedUserRoleD9F96B5CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthunauthenticatedUserRole1864BB59Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthIdentityPoolE7661338Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/subscriptionOnCreateEventResolver"
+   }
+  },
+  "SubscriptiononUpdateEventauth0FunctionSubscriptiononUpdateEventauth0FunctionAppSyncFunctionAED9A27A": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononUpdateEventauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/a33be6f506e64297711c096ec4876f62066b49ce3821c88f97239286ed3540af.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/SubscriptiononUpdateEventauth0Function/SubscriptiononUpdateEventauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononUpdateEventpostAuth0FunctionSubscriptiononUpdateEventpostAuth0FunctionAppSyncFunction4DED3B24": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononUpdateEventpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3a607c80c325a3edcae10503ccceaaad8e73d3447432eceba2dab95a3a1c4665.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/SubscriptiononUpdateEventpostAuth0Function/SubscriptiononUpdateEventpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnUpdateEventDataResolverFnSubscriptionOnUpdateEventDataResolverFnAppSyncFunction7E496C6A": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnUpdateEventDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/SubscriptionOnUpdateEventDataResolverFn/SubscriptionOnUpdateEventDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononUpdateEventResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "FieldName": "onUpdateEvent",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononUpdateEventauth0FunctionSubscriptiononUpdateEventauth0FunctionAppSyncFunctionAED9A27A",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononUpdateEventpostAuth0FunctionSubscriptiononUpdateEventpostAuth0FunctionAppSyncFunction4DED3B24",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnUpdateEventDataResolverFnSubscriptionOnUpdateEventDataResolverFnAppSyncFunction7E496C6A",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onUpdateEvent\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthauthenticatedUserRoleD9F96B5CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthunauthenticatedUserRole1864BB59Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthIdentityPoolE7661338Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/subscriptionOnUpdateEventResolver"
+   }
+  },
+  "SubscriptiononDeleteEventauth0FunctionSubscriptiononDeleteEventauth0FunctionAppSyncFunction7F46E879": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononDeleteEventauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/a33be6f506e64297711c096ec4876f62066b49ce3821c88f97239286ed3540af.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/SubscriptiononDeleteEventauth0Function/SubscriptiononDeleteEventauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononDeleteEventpostAuth0FunctionSubscriptiononDeleteEventpostAuth0FunctionAppSyncFunction2303D942": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononDeleteEventpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3a607c80c325a3edcae10503ccceaaad8e73d3447432eceba2dab95a3a1c4665.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/SubscriptiononDeleteEventpostAuth0Function/SubscriptiononDeleteEventpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnDeleteEventDataResolverFnSubscriptionOnDeleteEventDataResolverFnAppSyncFunctionEBB10049": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnDeleteEventDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/SubscriptionOnDeleteEventDataResolverFn/SubscriptionOnDeleteEventDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononDeleteEventResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "FieldName": "onDeleteEvent",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononDeleteEventauth0FunctionSubscriptiononDeleteEventauth0FunctionAppSyncFunction7F46E879",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononDeleteEventpostAuth0FunctionSubscriptiononDeleteEventpostAuth0FunctionAppSyncFunction2303D942",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnDeleteEventDataResolverFnSubscriptionOnDeleteEventDataResolverFnAppSyncFunctionEBB10049",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onDeleteEvent\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthauthenticatedUserRoleD9F96B5CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthunauthenticatedUserRole1864BB59Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthIdentityPoolE7661338Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/subscriptionOnDeleteEventResolver"
+   }
+  },
+  "EventOwnerDataResolverFnEventOwnerDataResolverFnAppSyncFunction00CBDDAF": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "EventOwnerDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/041534e5fd916595f752318f161512d7c7f83b9f2cf32d0f0be381c12253ff68.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/064303962e481067b44300212516363b99aaee539b6bafaf756fdd83ff0b60f0.vtl"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/EventOwnerDataResolverFn/EventOwnerDataResolverFn.AppSyncFunction"
+   }
+  },
+  "EventownerResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+    },
+    "FieldName": "owner",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "EventOwnerDataResolverFnEventOwnerDataResolverFnAppSyncFunction00CBDDAF",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Event\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"owner\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthauthenticatedUserRoleD9F96B5CRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:aws:sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthunauthenticatedUserRole1864BB59Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthIdentityPoolE7661338Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Event"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/eventOwnerResolver"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1WPT2+DMAzFP0vvwSvdaccVtGNX0d0rkxiUAgmKnU4I8d1H6NRpp+cn/3k/HyA/5JDv8JszbbqstzXMJ2IhcxHUnSoad8aAAwmFZArvjBXrnaqIfQyaVBFZ/PBnG/es17PX2UwOB29q+MK6pyMyKYsDzJXvH9NJz763etritmpROI48OQ1zue2XdYmCl2fGf/cRnU5UK15j2xhwQ/xF6e8UFsWvV2QmYXhPsno4Rt2RJKIlzX5GGaOorb1+31rXLsp5Q3Djl3v+BnvY725sbRaiEzsQVA/9AdELaeFGAQAA"
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Event/CDKMetadata/Default"
+   },
+   "Condition": "CDKMetadataAvailable"
+  }
+ },
+ "Outputs": {
+  "GetAttEventTableStreamArn": {
+   "Description": "Your DynamoDB table StreamArn.",
+   "Value": {
+    "Fn::GetAtt": [
+     "EventTable",
+     "TableStreamArn"
+    ]
+   },
+   "Export": {
+    "Name": {
+     "Fn::Join": [
+      ":",
+      [
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+       },
+       "GetAtt:EventTable:StreamArn"
+      ]
+     ]
+    }
+   }
+  },
+  "GetAttEventTableName": {
+   "Description": "Your DynamoDB table name.",
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "Event-",
+      {
+       "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+      },
+      "-NONE"
+     ]
+    ]
+   },
+   "Export": {
+    "Name": {
+     "Fn::Join": [
+      ":",
+      [
+       {
+        "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+       },
+       "GetAtt:EventTable:Name"
+      ]
+     ]
+    }
+   }
+  }
+ }
+}

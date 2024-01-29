@@ -1,0 +1,22 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("app/layout",{
+
+/***/ "(app-pages-browser)/./amplifyconfiguration.json":
+/*!***********************************!*\
+  !*** ./amplifyconfiguration.json ***!
+  \***********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = JSON.parse('{"aws_project_region":"us-east-1","aws_user_pools_id":"us-east-1_Kf4RIlwxT","aws_cognito_region":"us-east-1","aws_user_pools_web_client_id":"2188n0sd16f6ve9hpk7p9k9g6a","aws_cognito_identity_pool_id":"us-east-1:d7fb179b-e40a-4419-ad22-cd54517fab68","aws_cognito_signup_attributes":["EMAIL","PHONE_NUMBER","BIRTHDATE"],"aws_cognito_username_attributes":["EMAIL"],"aws_cognito_verification_mechanisms":["EMAIL"],"aws_cognito_password_protection_settings":{"passwordPolicyMinLength":8,"passwordPolicyCharacters":["REQUIRES_NUMBERS","REQUIRES_LOWERCASE","REQUIRES_UPPERCASE","REQUIRES_SYMBOLS"]},"aws_appsync_graphqlEndpoint":"https://pp644hs2tnaulbraiopycjrewm.appsync-api.us-east-1.amazonaws.com/graphql","aws_appsync_region":"us-east-1","aws_appsync_authenticationType":"AMAZON_COGNITO_USER_POOLS","aws_appsync_additionalAuthenticationTypes":"AWS_IAM","modelIntrospection":{"version":1,"models":{"Event":{"name":"Event","fields":{"id":{"name":"id","isArray":false,"type":"ID","isRequired":true,"attributes":[]},"title":{"name":"title","isArray":false,"type":"String","isRequired":true,"attributes":[]},"description":{"name":"description","isArray":false,"type":"String","isRequired":false,"attributes":[]},"location":{"name":"location","isArray":false,"type":"String","isRequired":false,"attributes":[]},"imageUrl":{"name":"imageUrl","isArray":false,"type":"String","isRequired":true,"attributes":[]},"createdAt":{"name":"createdAt","isArray":false,"type":"AWSDateTime","isRequired":false,"attributes":[]},"startDateTime":{"name":"startDateTime","isArray":false,"type":"AWSDateTime","isRequired":false,"attributes":[]},"endDateTime":{"name":"endDateTime","isArray":false,"type":"AWSDateTime","isRequired":false,"attributes":[]},"price":{"name":"price","isArray":false,"type":"String","isRequired":false,"attributes":[]},"isFree":{"name":"isFree","isArray":false,"type":"Boolean","isRequired":false,"attributes":[]},"url":{"name":"url","isArray":false,"type":"String","isRequired":false,"attributes":[]},"owner":{"name":"owner","isArray":false,"type":"String","isRequired":false,"attributes":[]},"updatedAt":{"name":"updatedAt","isArray":false,"type":"AWSDateTime","isRequired":true,"attributes":[]}},"syncable":true,"pluralName":"Events","attributes":[{"type":"model","properties":{}},{"type":"key","properties":{"fields":["id"]}},{"type":"auth","properties":{"rules":[{"provider":"userPools","ownerField":"owner","allow":"owner","identityClaim":"cognito:username","operations":["create","update","delete","read"]}]}}],"primaryKeyInfo":{"isCustomPrimaryKey":false,"primaryKeyFieldName":"id","sortKeyFieldNames":[]}}},"enums":{},"nonModels":{}}}');
+
+/***/ })
+
+});

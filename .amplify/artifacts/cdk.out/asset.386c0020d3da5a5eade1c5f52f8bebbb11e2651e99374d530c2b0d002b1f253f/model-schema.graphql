@@ -1,0 +1,16 @@
+type Event @model @auth(rules: [{allow: owner, ownerField: "owner"}])
+{
+  id: ID! @primaryKey
+  title: String!
+  description: String
+  location: String
+  imageUrl: String!
+  createdAt: AWSDateTime
+  startDateTime: AWSDateTime
+  endDateTime: AWSDateTime
+  price: String
+  isFree: Boolean @default(value: "false")
+  url: String
+  owner: String
+  updatedAt: AWSDateTime!
+}

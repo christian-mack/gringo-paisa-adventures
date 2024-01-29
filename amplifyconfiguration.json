@@ -1,9 +1,9 @@
 {
   "aws_project_region": "us-east-1",
-  "aws_user_pools_id": "us-east-1_fCMm0qoJq",
+  "aws_user_pools_id": "us-east-1_Kf4RIlwxT",
   "aws_cognito_region": "us-east-1",
-  "aws_user_pools_web_client_id": "12f40l62afr4khaj3gcaj0j9fk",
-  "aws_cognito_identity_pool_id": "us-east-1:bb93ae54-7c92-42dd-a7b2-5388780ee15f",
+  "aws_user_pools_web_client_id": "2188n0sd16f6ve9hpk7p9k9g6a",
+  "aws_cognito_identity_pool_id": "us-east-1:d7fb179b-e40a-4419-ad22-cd54517fab68",
   "aws_cognito_signup_attributes": [
     "EMAIL",
     "PHONE_NUMBER",
@@ -24,15 +24,15 @@
       "REQUIRES_SYMBOLS"
     ]
   },
-  "aws_appsync_graphqlEndpoint": "https://4i3fufwgxrbbdoz22fdxrrbf4y.appsync-api.us-east-1.amazonaws.com/graphql",
+  "aws_appsync_graphqlEndpoint": "https://pp644hs2tnaulbraiopycjrewm.appsync-api.us-east-1.amazonaws.com/graphql",
   "aws_appsync_region": "us-east-1",
   "aws_appsync_authenticationType": "AMAZON_COGNITO_USER_POOLS",
   "aws_appsync_additionalAuthenticationTypes": "AWS_IAM",
   "modelIntrospection": {
     "version": 1,
     "models": {
-      "Todo": {
-        "name": "Todo",
+      "Event": {
+        "name": "Event",
         "fields": {
           "id": {
             "name": "id",
@@ -41,26 +41,73 @@
             "isRequired": true,
             "attributes": []
           },
-          "content": {
-            "name": "content",
+          "title": {
+            "name": "title",
+            "isArray": false,
+            "type": "String",
+            "isRequired": true,
+            "attributes": []
+          },
+          "description": {
+            "name": "description",
             "isArray": false,
             "type": "String",
             "isRequired": false,
             "attributes": []
           },
-          "done": {
-            "name": "done",
+          "location": {
+            "name": "location",
+            "isArray": false,
+            "type": "String",
+            "isRequired": false,
+            "attributes": []
+          },
+          "imageUrl": {
+            "name": "imageUrl",
+            "isArray": false,
+            "type": "String",
+            "isRequired": true,
+            "attributes": []
+          },
+          "createdAt": {
+            "name": "createdAt",
+            "isArray": false,
+            "type": "AWSDateTime",
+            "isRequired": false,
+            "attributes": []
+          },
+          "startDateTime": {
+            "name": "startDateTime",
+            "isArray": false,
+            "type": "AWSDateTime",
+            "isRequired": false,
+            "attributes": []
+          },
+          "endDateTime": {
+            "name": "endDateTime",
+            "isArray": false,
+            "type": "AWSDateTime",
+            "isRequired": false,
+            "attributes": []
+          },
+          "price": {
+            "name": "price",
+            "isArray": false,
+            "type": "String",
+            "isRequired": false,
+            "attributes": []
+          },
+          "isFree": {
+            "name": "isFree",
             "isArray": false,
             "type": "Boolean",
             "isRequired": false,
             "attributes": []
           },
-          "priority": {
-            "name": "priority",
+          "url": {
+            "name": "url",
             "isArray": false,
-            "type": {
-              "enum": "Priority"
-            },
+            "type": "String",
             "isRequired": false,
             "attributes": []
           },
@@ -69,13 +116,6 @@
             "isArray": false,
             "type": "String",
             "isRequired": false,
-            "attributes": []
-          },
-          "createdAt": {
-            "name": "createdAt",
-            "isArray": false,
-            "type": "AWSDateTime",
-            "isRequired": true,
             "attributes": []
           },
           "updatedAt": {
@@ -87,7 +127,7 @@
           }
         },
         "syncable": true,
-        "pluralName": "Todos",
+        "pluralName": "Events",
         "attributes": [
           {
             "type": "model",
@@ -128,16 +168,7 @@
         }
       }
     },
-    "enums": {
-      "Priority": {
-        "name": "Priority",
-        "values": [
-          "low",
-          "medium",
-          "high"
-        ]
-      }
-    },
+    "enums": {},
     "nonModels": {}
   }
 }
