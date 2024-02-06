@@ -6,12 +6,17 @@ export interface EventType {
   description: string;
   location: string;
   imageUrl: string;
+  category: string;
   createdAt: Date;
   startDateTime: Date;
   endDateTime: Date;
   price: string;
   isFree: boolean;
   url: string;
+}
+
+export interface CategoryType {
+  name: string;
 }
 
 const schema = a.schema({
@@ -21,8 +26,9 @@ const schema = a.schema({
       title: a.string().required(),
       description: a.string(),
       location: a.string(),
+      category: a.string(),
       price: a.string(),
-      url: a.string(),
+      url: a.url(),
       createdAt: a.datetime(),
       startDateTime: a.datetime(),
       endDateTime: a.datetime(),
@@ -31,6 +37,11 @@ const schema = a.schema({
       // TODO: add ref to organizer/user
     })
     .authorization([a.allow.owner()]),
+  Category: a
+    .model({
+      name: a.string().required(),
+    })
+    .authorization([a.allow.multipleOwners()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;

@@ -1,13 +1,15 @@
 # Gringo Paisa Adventures
 
-## A website for tours and experiences in Colombia
+## A business application for a travel and experiences company in Colombia
 
 ### Next.js | AWS Amplify | Zustand | Tailwind | Shadcn
 
 FEATURES IN PROGRESS:
 
-- [ ] File uploader for the documents model
-- [x] Date picker for the create event form
+- [x] Finish create event form
+  - [x] Date picker for the create event form
+  - [x] File uploader for images - aws s3 bucket or uploadThing
+  - [x] Revisit/tighten zod valitaions
 - [ ] event details page
 - [ ] related events page
 - [ ] stripe checkout

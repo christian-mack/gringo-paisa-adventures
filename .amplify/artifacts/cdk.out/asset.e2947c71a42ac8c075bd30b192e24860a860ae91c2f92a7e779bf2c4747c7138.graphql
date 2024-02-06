@@ -1,0 +1,283 @@
+type Event {
+  id: ID!
+  imageUrl: String!
+  title: String!
+  description: String
+  location: String
+  category: String
+  price: String
+  url: AWSURL
+  createdAt: AWSDateTime
+  startDateTime: AWSDateTime
+  endDateTime: AWSDateTime
+  isFree: Boolean
+  owner: String
+  updatedAt: AWSDateTime!
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelSubscriptionStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  in: [String]
+  notIn: [String]
+}
+
+input ModelSubscriptionIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  in: [Int]
+  notIn: [Int]
+}
+
+input ModelSubscriptionFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  in: [Float]
+  notIn: [Float]
+}
+
+input ModelSubscriptionBooleanInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelSubscriptionIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  in: [ID]
+  notIn: [ID]
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelEventConnection {
+  items: [Event]!
+  nextToken: String
+}
+
+input ModelEventFilterInput {
+  id: ModelIDInput
+  imageUrl: ModelStringInput
+  title: ModelStringInput
+  description: ModelStringInput
+  location: ModelStringInput
+  category: ModelStringInput
+  price: ModelStringInput
+  url: ModelStringInput
+  createdAt: ModelStringInput
+  startDateTime: ModelStringInput
+  endDateTime: ModelStringInput
+  isFree: ModelBooleanInput
+  owner: ModelStringInput
+  updatedAt: ModelStringInput
+  and: [ModelEventFilterInput]
+  or: [ModelEventFilterInput]
+  not: ModelEventFilterInput
+}
+
+type Query {
+  getEvent(id: ID!): Event
+  listEvents(id: ID, filter: ModelEventFilterInput, limit: Int, nextToken: String, sortDirection: ModelSortDirection): ModelEventConnection
+}
+
+input ModelEventConditionInput {
+  imageUrl: ModelStringInput
+  title: ModelStringInput
+  description: ModelStringInput
+  location: ModelStringInput
+  category: ModelStringInput
+  price: ModelStringInput
+  url: ModelStringInput
+  createdAt: ModelStringInput
+  startDateTime: ModelStringInput
+  endDateTime: ModelStringInput
+  isFree: ModelBooleanInput
+  owner: ModelStringInput
+  updatedAt: ModelStringInput
+  and: [ModelEventConditionInput]
+  or: [ModelEventConditionInput]
+  not: ModelEventConditionInput
+}
+
+input CreateEventInput {
+  id: ID
+  imageUrl: String!
+  title: String!
+  description: String
+  location: String
+  category: String
+  price: String
+  url: AWSURL
+  createdAt: AWSDateTime
+  startDateTime: AWSDateTime
+  endDateTime: AWSDateTime
+  isFree: Boolean
+  owner: String
+  updatedAt: AWSDateTime
+}
+
+input UpdateEventInput {
+  id: ID!
+  imageUrl: String
+  title: String
+  description: String
+  location: String
+  category: String
+  price: String
+  url: AWSURL
+  createdAt: AWSDateTime
+  startDateTime: AWSDateTime
+  endDateTime: AWSDateTime
+  isFree: Boolean
+  owner: String
+  updatedAt: AWSDateTime
+}
+
+input DeleteEventInput {
+  id: ID!
+}
+
+type Mutation {
+  createEvent(input: CreateEventInput!, condition: ModelEventConditionInput): Event
+  updateEvent(input: UpdateEventInput!, condition: ModelEventConditionInput): Event
+  deleteEvent(input: DeleteEventInput!, condition: ModelEventConditionInput): Event
+}
+
+input ModelSubscriptionEventFilterInput {
+  id: ModelSubscriptionIDInput
+  imageUrl: ModelSubscriptionStringInput
+  title: ModelSubscriptionStringInput
+  description: ModelSubscriptionStringInput
+  location: ModelSubscriptionStringInput
+  category: ModelSubscriptionStringInput
+  price: ModelSubscriptionStringInput
+  url: ModelSubscriptionStringInput
+  createdAt: ModelSubscriptionStringInput
+  startDateTime: ModelSubscriptionStringInput
+  endDateTime: ModelSubscriptionStringInput
+  isFree: ModelSubscriptionBooleanInput
+  updatedAt: ModelSubscriptionStringInput
+  and: [ModelSubscriptionEventFilterInput]
+  or: [ModelSubscriptionEventFilterInput]
+}
+
+type Subscription {
+  onCreateEvent(filter: ModelSubscriptionEventFilterInput, owner: String): Event @aws_subscribe(mutations: ["createEvent"])
+  onUpdateEvent(filter: ModelSubscriptionEventFilterInput, owner: String): Event @aws_subscribe(mutations: ["updateEvent"])
+  onDeleteEvent(filter: ModelSubscriptionEventFilterInput, owner: String): Event @aws_subscribe(mutations: ["deleteEvent"])
+}

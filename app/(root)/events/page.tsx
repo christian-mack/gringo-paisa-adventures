@@ -1,5 +1,3 @@
-"use client";
-
 import EventList from "@/components/shared/EventList";
 
 const EventsPage = () => {

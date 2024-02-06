@@ -5,8 +5,9 @@ const client = generateClient<Schema>();
 
 // Now you should be able to make CRUDL operations with the
 // Data client
-async function fetchTodos() {
-  const { data: todos, errors } = await client.models.Todo.list();
+async function fetchEvents() {
+  const { data: events, errors } = await client.models.Event.list();
+  return { events, errors };
 }
 
-export { fetchTodos };
+export { fetchEvents };

@@ -18,7 +18,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f418bfac3a91ff9338e4ba5c8910ef32ad56587e86c4211001905511c535355f.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/215a2f0e6fbafe7f316ecc7f84aba8cdf00fbbdf386ece1e6d0e3dc358e9c72b.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -70,10 +70,22 @@
             "data": "amplifyAuthauthenticatedUserRoleD8DA3689"
           }
         ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifyAuth/authenticatedUserRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthauthenticatedUserRoleDefaultPolicy82E52873"
+          }
+        ],
         "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthunauthenticatedUserRole2B524D9E"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifyAuth/unauthenticatedUserRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthunauthenticatedUserRoleDefaultPolicy1AB22815"
           }
         ],
         "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifyAuth/IdentityPoolRoleAttachment": [
@@ -92,6 +104,12 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/reference-to-amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackNestedStackBucketStackNestedStackResource2E0A9681Outputs.amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackNestedStackBucketStackNestedStackResource2E0A9681Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn"
           }
         ],
         "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthUserPool1EC17B2ARef": [
@@ -986,6 +1004,596 @@
             "data": "amplifyDataEventNestedStackEventNestedStackResourceE9D0FB99"
           }
         ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/DynamoDBModelTableReadIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableReadIOPS"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/DynamoDBModelTableWriteIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableWriteIOPS"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/DynamoDBBillingMode": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBBillingMode"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/DynamoDBEnablePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnablePointInTimeRecovery"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/DynamoDBEnableServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnableServerSideEncryption"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/HasEnvironmentParameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HasEnvironmentParameter"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/ShouldUseServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUseServerSideEncryption"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/ShouldUsePayPerRequestBilling": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUsePayPerRequestBilling"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/ShouldUsePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUsePointInTimeRecovery"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/CategoryTable": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Category"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/CategoryTable/Default/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CategoryTable"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Category"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/GetAttCategoryTableStreamArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetAttCategoryTableStreamArn"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/GetAttCategoryTableName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetAttCategoryTableName"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/CategoryIAMRole": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "CategoryIAMRole"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/CategoryIAMRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CategoryIAMRoleBFA67DCD"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "CategoryIAMRole"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/CategoryIAMRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CategoryIAMRoleDefaultPolicy0AE8742A"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/DynamoDBAccess/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBAccess71ABE5AE"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/CategoryDataSource": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "CategoryTable"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/CategoryDataSource/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CategoryDataSource"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "CategoryTable"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/QuerygetCategorypreAuth0Function/QuerygetCategorypreAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetCategorypreAuth0FunctionQuerygetCategorypreAuth0FunctionAppSyncFunction789A457E"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetCategorypreAuth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/QuerygetCategoryauth0Function/QuerygetCategoryauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetCategoryauth0FunctionQuerygetCategoryauth0FunctionAppSyncFunction8F9641C7"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetCategoryauth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/QuerygetCategorypostAuth0Function/QuerygetCategorypostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetCategorypostAuth0FunctionQuerygetCategorypostAuth0FunctionAppSyncFunction15BCF356"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetCategorypostAuth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/QueryGetCategoryDataResolverFn/QueryGetCategoryDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryGetCategoryDataResolverFnQueryGetCategoryDataResolverFnAppSyncFunction664FFE01"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryGetCategoryDataResolverFn"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/queryGetCategoryResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetCategoryResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.getCategory"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/QuerylistCategoriespreAuth0Function/QuerylistCategoriespreAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistCategoriespreAuth0FunctionQuerylistCategoriespreAuth0FunctionAppSyncFunctionB92C57F6"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistCategoriespreAuth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/QuerylistCategoriesauth0Function/QuerylistCategoriesauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistCategoriesauth0FunctionQuerylistCategoriesauth0FunctionAppSyncFunction5854EFCA"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistCategoriesauth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/QuerylistCategoriespostAuth0Function/QuerylistCategoriespostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistCategoriespostAuth0FunctionQuerylistCategoriespostAuth0FunctionAppSyncFunction3B411DD0"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistCategoriespostAuth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/QueryListCategoriesDataResolverFn/QueryListCategoriesDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryListCategoriesDataResolverFnQueryListCategoriesDataResolverFnAppSyncFunctionA98A6BC1"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryListCategoriesDataResolverFn"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/queryListCategoriesResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ListCategoryResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.listCategories"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/MutationcreateCategoryinit0Function/MutationcreateCategoryinit0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateCategoryinit0FunctionMutationcreateCategoryinit0FunctionAppSyncFunction2F62B0C9"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateCategoryinit0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/MutationcreateCategorypreAuth0Function/MutationcreateCategorypreAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateCategorypreAuth0FunctionMutationcreateCategorypreAuth0FunctionAppSyncFunction7847A1D6"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateCategorypreAuth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/MutationcreateCategoryauth0Function/MutationcreateCategoryauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateCategoryauth0FunctionMutationcreateCategoryauth0FunctionAppSyncFunctionADBDFC31"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateCategoryauth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/MutationcreateCategorypostAuth0Function/MutationcreateCategorypostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateCategorypostAuth0FunctionMutationcreateCategorypostAuth0FunctionAppSyncFunction8FE85DCD"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateCategorypostAuth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/MutationCreateCategoryDataResolverFn/MutationCreateCategoryDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationCreateCategoryDataResolverFnMutationCreateCategoryDataResolverFnAppSyncFunction88A74168"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationCreateCategoryDataResolverFn"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/mutationCreateCategoryResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateCategoryResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.createCategory"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/MutationupdateCategoryinit0Function/MutationupdateCategoryinit0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateCategoryinit0FunctionMutationupdateCategoryinit0FunctionAppSyncFunction6F02F297"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateCategoryinit0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/MutationupdateCategorypreAuth0Function/MutationupdateCategorypreAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateCategorypreAuth0FunctionMutationupdateCategorypreAuth0FunctionAppSyncFunction2BBFFB4F"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateCategorypreAuth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/MutationupdateCategoryauth0Function/MutationupdateCategoryauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateCategoryauth0FunctionMutationupdateCategoryauth0FunctionAppSyncFunction89B37FA2"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateCategoryauth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/MutationupdateCategorypostAuth0Function/MutationupdateCategorypostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateCategorypostAuth0FunctionMutationupdateCategorypostAuth0FunctionAppSyncFunction7294B392"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateCategorypostAuth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/MutationUpdateCategoryDataResolverFn/MutationUpdateCategoryDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationUpdateCategoryDataResolverFnMutationUpdateCategoryDataResolverFnAppSyncFunctionC24BA823"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationUpdateCategoryDataResolverFn"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/mutationUpdateCategoryResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UpdateCategoryResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.updateCategory"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/MutationdeleteCategorypreAuth0Function/MutationdeleteCategorypreAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteCategorypreAuth0FunctionMutationdeleteCategorypreAuth0FunctionAppSyncFunction590E4E12"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteCategorypreAuth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/MutationdeleteCategoryauth0Function/MutationdeleteCategoryauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteCategoryauth0FunctionMutationdeleteCategoryauth0FunctionAppSyncFunction8A0D27C9"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteCategoryauth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/MutationdeleteCategorypostAuth0Function/MutationdeleteCategorypostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteCategorypostAuth0FunctionMutationdeleteCategorypostAuth0FunctionAppSyncFunctionC3AE835D"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteCategorypostAuth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/MutationDeleteCategoryDataResolverFn/MutationDeleteCategoryDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationDeleteCategoryDataResolverFnMutationDeleteCategoryDataResolverFnAppSyncFunctionB44DFDF2"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationDeleteCategoryDataResolverFn"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/mutationDeleteCategoryResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeleteCategoryResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.deleteCategory"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/SubscriptiononCreateCategoryauth0Function/SubscriptiononCreateCategoryauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateCategoryauth0FunctionSubscriptiononCreateCategoryauth0FunctionAppSyncFunction15E4A3EF"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononCreateCategoryauth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/SubscriptiononCreateCategorypostAuth0Function/SubscriptiononCreateCategorypostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateCategorypostAuth0FunctionSubscriptiononCreateCategorypostAuth0FunctionAppSyncFunction9E3EA25C"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononCreateCategorypostAuth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/SubscriptionOnCreateCategoryDataResolverFn/SubscriptionOnCreateCategoryDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnCreateCategoryDataResolverFnSubscriptionOnCreateCategoryDataResolverFnAppSyncFunction06759B82"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnCreateCategoryDataResolverFn"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/subscriptionOnCreateCategoryResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateCategoryResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onCreateCategory"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/SubscriptiononUpdateCategoryauth0Function/SubscriptiononUpdateCategoryauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateCategoryauth0FunctionSubscriptiononUpdateCategoryauth0FunctionAppSyncFunction836BB3AE"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononUpdateCategoryauth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/SubscriptiononUpdateCategorypostAuth0Function/SubscriptiononUpdateCategorypostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateCategorypostAuth0FunctionSubscriptiononUpdateCategorypostAuth0FunctionAppSyncFunction313D1497"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononUpdateCategorypostAuth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/SubscriptionOnUpdateCategoryDataResolverFn/SubscriptionOnUpdateCategoryDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnUpdateCategoryDataResolverFnSubscriptionOnUpdateCategoryDataResolverFnAppSyncFunctionD8B573A8"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnUpdateCategoryDataResolverFn"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/subscriptionOnUpdateCategoryResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateCategoryResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onUpdateCategory"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/SubscriptiononDeleteCategoryauth0Function/SubscriptiononDeleteCategoryauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteCategoryauth0FunctionSubscriptiononDeleteCategoryauth0FunctionAppSyncFunction9DE1F320"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononDeleteCategoryauth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/SubscriptiononDeleteCategorypostAuth0Function/SubscriptiononDeleteCategorypostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteCategorypostAuth0FunctionSubscriptiononDeleteCategorypostAuth0FunctionAppSyncFunction3854A641"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononDeleteCategorypostAuth0Function"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/SubscriptionOnDeleteCategoryDataResolverFn/SubscriptionOnDeleteCategoryDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnDeleteCategoryDataResolverFnSubscriptionOnDeleteCategoryDataResolverFnAppSyncFunction3EAC245C"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnDeleteCategoryDataResolverFn"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/subscriptionOnDeleteCategoryResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteCategoryResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onDeleteCategory"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/CategoryOwnerDataResolverFn/CategoryOwnerDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CategoryOwnerDataResolverFnCategoryOwnerDataResolverFnAppSyncFunctionB634A5A7"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "CategoryOwnerDataResolverFn"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/categoryOwnerResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CategoryownerResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Category.owner"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/reference-to-amplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource6A3F2E6EOutputs.amplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent213C7B20Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource6A3F2E6EOutputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyData54447D23"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/reference-to-amplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPI26752207ApiId"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/reference-to-amplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataGraphQLAPINONEDSA932C8D8Name"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/reference-to-amplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputs.amplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthauthenticatedUserRoleD9F96B5CRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthauthenticatedUserRoleD9F96B5CRef"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/reference-to-amplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputs.amplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthunauthenticatedUserRole1864BB59Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthunauthenticatedUserRole1864BB59Ref"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category/reference-to-amplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputs.amplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthIdentityPoolE7661338Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthIdentityPoolE7661338Ref"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category.NestedStack/Category.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataCategoryNestedStackCategoryNestedStackResource018C67D6"
+          }
+        ],
         "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
@@ -1170,6 +1778,36 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "awsAppsyncAdditionalAuthenticationTypes"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack/Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Bucket83908E77"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack/amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn"
+          }
+        ],
+        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack.NestedStack/BucketStack.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketStackD7446A8B"
           }
         ],
         "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/CDKMetadata/Default": [

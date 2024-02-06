@@ -136,6 +136,14 @@
   "auth179371D7": {
    "Type": "AWS::CloudFormation::Stack",
    "Properties": {
+    "Parameters": {
+     "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackNestedStackBucketStackNestedStackResource2E0A9681Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn": {
+      "Fn::GetAtt": [
+       "BucketStackD7446A8B",
+       "Outputs.amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn"
+      ]
+     }
+    },
     "TemplateURL": {
      "Fn::Join": [
       "",
@@ -152,7 +160,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/1049e0b9baa021e706ccedc9e6f3a8a66df25038cc7803292e41c4dfe0487032.json"
+       "/923c35e026c9bee2dac850eb38acd8d54e783b98da1fa8aae9f0c508812f416c.json"
       ]
      ]
     }
@@ -210,7 +218,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/59f17547491c2d45bd382fb6e95bcd9075592ebb6d9a2da6e8ae49efbe9c5ae3.json"
+       "/42893d1e1a278bdc87182bc9d59dc7b8755f8bfcab843a42971a71fbae367ec1.json"
       ]
      ]
     }
@@ -220,6 +228,38 @@
    "Metadata": {
     "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data.NestedStack/data.NestedStackResource",
     "aws:asset:path": "amplifygringopaisaadventureschristianmacksandbox17ec455a8bdata93E1B3AA.nested.template.json",
+    "aws:asset:property": "TemplateURL"
+   }
+  },
+  "BucketStackD7446A8B": {
+   "Type": "AWS::CloudFormation::Stack",
+   "Properties": {
+    "TemplateURL": {
+     "Fn::Join": [
+      "",
+      [
+       "https://s3.",
+       {
+        "Ref": "AWS::Region"
+       },
+       ".",
+       {
+        "Ref": "AWS::URLSuffix"
+       },
+       "/",
+       {
+        "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
+       },
+       "/6022b5cb41998329eb4741c55b1504f9d29ebb45e95f0bf4b5a8a93d01dc3549.json"
+      ]
+     ]
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack.NestedStack/BucketStack.NestedStackResource",
+    "aws:asset:path": "amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackB8EEAF25.nested.template.json",
     "aws:asset:property": "TemplateURL"
    }
   },

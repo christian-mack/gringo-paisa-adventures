@@ -1,10 +1,12 @@
-"use client";
-
+import Collection from "@/components/shared/Collection";
 import { Button } from "@/components/ui/button";
+import { AuthGetCurrentUserServer, cookiesClient } from "@/utils/amplifyUtils";
 import Image from "next/image";
 import Link from "next/link";
 
-function Home() {
+export default async function Home() {
+  const { data: events, errors } = await cookiesClient.models.Event.list();
+
   return (
     <>
       <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
@@ -40,9 +42,17 @@ function Home() {
         <div className="flex w-full flex-col gap-5 md:flex-row">
           Search CategoryFilter
         </div>
+
+        <Collection
+          data={events}
+          emptyTitle="No events found"
+          emptyStateSubtext="Come back later"
+          collectionType="all_events"
+          limit={6}
+          page={1}
+          totalPages={2}
+        />
       </section>
     </>
   );
 }
-
-export default Home;

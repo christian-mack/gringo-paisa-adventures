@@ -1,37 +1,28 @@
-import { useState, useEffect } from "react";
-import { generateClient } from "aws-amplify/data";
-import type { Schema } from "@/amplify/data/resource";
-import { useAuthStore } from "@/hooks/state/authStore";
+import { cookiesClient } from "@/utils/amplifyUtils";
 
-// generate your data client using the Schema from your backend
-const client = generateClient<Schema>();
-
-export default function EventList() {
-  const [events, setEvents] = useState<Schema["Event"][]>([]);
-
-  useEffect(() => {
-    fetchEvents();
-  }, []);
-
-  const fetchEvents = async () => {
-    try {
-      const { data: events, errors } = await client.models.Event.list();
-      setEvents(events);
-    } catch (error) {
-      console.log(`Error finding events. ERROR :: ${error}`);
-    }
-  };
-
-  console.log(events);
+export default async function EventList() {
+  const { data: events } = await cookiesClient.models.Event.list();
 
   return (
     <div>
       <h1>Events</h1>
 
       <ul>
-        {events.map((event) => (
-          <li key={event.id}>{event.title}</li>
-        ))}
+        {events &&
+          events.map((event) => (
+            <li key={event.id}>
+              {event.id}
+              <div>{event.title}</div>
+              <div>{event.description}</div>
+              <div>{event.location}</div>
+              <div>{event.price}</div>
+              <div>{event.createdAt}</div>
+              <div>{event.startDateTime}</div>
+              <div>{event.endDateTime}</div>
+              <div>{event.isFree}</div>
+              <div>{event.category}</div>
+            </li>
+          ))}
       </ul>
     </div>
   );
