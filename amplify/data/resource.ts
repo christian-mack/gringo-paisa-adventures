@@ -34,12 +34,12 @@ const schema = a.schema({
       // TODO: add ref to categories
       // TODO: add ref to organizer/user
     })
-    .authorization([a.allow.owner()]),
+    .authorization([a.allow.public("iam").to(["read"]), a.allow.owner()]),
   Category: a
     .model({
       name: a.string().required(),
     })
-    .authorization([a.allow.multipleOwners()]),
+    .authorization([a.allow.public("iam").to(["read"]), a.allow.owner()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;

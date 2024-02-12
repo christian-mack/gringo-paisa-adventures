@@ -35,7 +35,7 @@
      ]
     },
     "DefinitionS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c76c8fdc82f34d91e8ced9091ce9356f053618748030bbd35a5b49818630e8a7.graphql"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/21b2fc140bbfebbc75cc084710eae98fd43287bf4214bc48a4b6f3ef7e5d7e24.graphql"
     }
    },
    "Metadata": {
@@ -162,7 +162,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/3a3273b888cfac667cfcfca6e62f5aa48e8b1e411323a0a421a66cdcd4defb6a.json"
+       "/3db1c1c69ce5693aab15733d6011443fd4647c609942a5d80ddf989db63c4a06.json"
       ]
      ]
     }
@@ -241,7 +241,7 @@
        {
         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
        },
-       "/559f8a5aea80cd9a6449bac7b891abcdf983cdb0238ceb83196e358b3c21c745.json"
+       "/f64442325d6a4a320a2dde66aec0cea651f953064f007f26248c4d510ee19a4e.json"
       ]
      ]
     }
@@ -255,6 +255,594 @@
     "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/Category.NestedStack/Category.NestedStackResource",
     "aws:asset:path": "amplifygringopaisaadventureschristianmacksandbox17ec455a8bdataamplifyDataCategory1FD7BCD5.nested.template.json",
     "aws:asset:property": "TemplateURL"
+   }
+  },
+  "amplifyDataAuthRolePolicy01567A5654": {
+   "Type": "AWS::IAM::ManagedPolicy",
+   "Properties": {
+    "Description": "",
+    "Path": "/",
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "appsync:GraphQL",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/*",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Event"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/*",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Category"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Query",
+           "fieldName": "getEvent"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Query",
+           "fieldName": "listEvents"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Mutation",
+           "fieldName": "createEvent"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Mutation",
+           "fieldName": "updateEvent"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Mutation",
+           "fieldName": "deleteEvent"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Subscription",
+           "fieldName": "onCreateEvent"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Subscription",
+           "fieldName": "onUpdateEvent"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Subscription",
+           "fieldName": "onDeleteEvent"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Query",
+           "fieldName": "getCategory"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Query",
+           "fieldName": "listCategories"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Mutation",
+           "fieldName": "createCategory"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Mutation",
+           "fieldName": "updateCategory"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Mutation",
+           "fieldName": "deleteCategory"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Subscription",
+           "fieldName": "onCreateCategory"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Subscription",
+           "fieldName": "onUpdateCategory"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Subscription",
+           "fieldName": "onDeleteCategory"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Roles": [
+     {
+      "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthauthenticatedUserRoleD9F96B5CRef"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/AuthRolePolicy01/Resource"
+   }
+  },
+  "amplifyDataUnauthRolePolicy01355B9DCF": {
+   "Type": "AWS::IAM::ManagedPolicy",
+   "Properties": {
+    "Description": "",
+    "Path": "/",
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "appsync:GraphQL",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/*",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Event"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/*",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Category"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Query",
+           "fieldName": "getEvent"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Query",
+           "fieldName": "listEvents"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Mutation",
+           "fieldName": "createEvent"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Mutation",
+           "fieldName": "updateEvent"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Mutation",
+           "fieldName": "deleteEvent"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Subscription",
+           "fieldName": "onCreateEvent"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Subscription",
+           "fieldName": "onUpdateEvent"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Subscription",
+           "fieldName": "onDeleteEvent"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Query",
+           "fieldName": "getCategory"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Query",
+           "fieldName": "listCategories"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Mutation",
+           "fieldName": "createCategory"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Mutation",
+           "fieldName": "updateCategory"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Mutation",
+           "fieldName": "deleteCategory"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Subscription",
+           "fieldName": "onCreateCategory"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Subscription",
+           "fieldName": "onUpdateCategory"
+          }
+         ]
+        },
+        {
+         "Fn::Sub": [
+          "arn:aws:appsync:${AWS::Region}:${AWS::AccountId}:apis/${apiId}/types/${typeName}/fields/${fieldName}",
+          {
+           "apiId": {
+            "Fn::GetAtt": [
+             "amplifyDataGraphQLAPI42A6FA33",
+             "ApiId"
+            ]
+           },
+           "typeName": "Subscription",
+           "fieldName": "onDeleteCategory"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Roles": [
+     {
+      "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthNestedStackauthNestedStackResourceD3AAA445Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthunauthenticatedUserRole1864BB59Ref"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/amplifyData/UnauthRolePolicy01/Resource"
    }
   },
   "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucket9CCB4ACA": {
@@ -387,7 +975,7 @@
      }
     ],
     "SourceObjectKeys": [
-     "1e408ca1fd6aced7c2a6f8bc7c5668381a6150bea63e0e604d4ce0e87d5d4e1e.zip"
+     "90ee9b8700749642366e1ecade3614cd5cdac424e269912815f9af2d4ce85fab.zip"
     ],
     "SourceMarkers": [
      {}
@@ -644,7 +1232,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1VRTW/CMAz9LdxDRtlpRyjaLggxKu2KTOJBIB9dnIKqqv99SUNhO/n52Xl+dua8mBe8mMCNpkJeplodeLdBCiirAOLCdkiu8QJZ7Nh3UNfUWsG7Dw/16UcvarUEQlZ+24H5XEfmT1aJExpgG2dxBQGqLBXrz6xn9BqFiTAQX6TAJNbatQZt4MtGXDCsHkTq5l1mh8kZJsk7ymHrtBLtk855zzSYgwTexcIaWvRf6Ek5yypljxqDs++NFSExDxBbR9wzBYZ3O6eHJYb4nHSf0bNhi3i+YxRNhXzJsqHgzOOe6f2Is6u9To728dBCK764UanVYHIQBw8GQ0r+6Wy9uyqJfvyG0lmpslfrJPIzvVyLNz7js8mZlJr6xgZlkO9y/AXehkpzAAIAAA=="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1VRy3LCMAz8Fu7GJfTUI4QpF8pQMtMrI2wVDH6ktgOTyeTf60dDykmr1XolS3NazAtaTODupoxfp1IcabdF55FXHtiV7NGZxjIkQXHooK5dqxnt1hbq849c1GIJDkn5rRPzuQnMv6xiZ1RAtkbjCjxU2SrUx6wn7jUYO4fe0UUMhGMtTatQe7ps2BX96kFENe0ymzpnGC3/UA47IwVrRzrnPRGgaPcBGk7IR80zsTcyzZjiKBosJKgjB9oFagMt2i+0ThhNKqFPEr3R741mPjIPEKQD7nuSPhm2ewoPYikvumycN+qx7th/wLnjQcZuh3AHJgVd3F0pRRogDQcWFPqYPPnsrLkJjna4Umk0F2kOog1HenEvt+KNzuhscnFCTG2jvVBI9zn+ArCse8ofAgAA"
    },
    "Metadata": {
     "aws:cdk:path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/data/CDKMetadata/Default"

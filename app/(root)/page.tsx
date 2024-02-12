@@ -1,14 +1,28 @@
+"use client";
+import { Schema } from "@/amplify/data/resource";
 import Collection from "@/components/shared/Collection";
 import { Button } from "@/components/ui/button";
-import { AuthGetCurrentUserServer, cookiesClient } from "@/utils/amplify";
+import { awsclient } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
-export default async function Home() {
-  const { data: events, errors } = await cookiesClient.models.Event.list();
-  const user = await AuthGetCurrentUserServer();
+export default function Home() {
+  const [events, setEvents] = useState<Schema["Event"][]>([]);
 
-  console.log(user);
+  async function listEvents() {
+    // fetch all events
+    try {
+      const { data } = await awsclient.models.Event.list();
+      setEvents(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    listEvents();
+  });
 
   return (
     <>
@@ -49,7 +63,7 @@ export default async function Home() {
         <Collection
           data={events}
           emptyTitle="No events found"
-          emptyStateSubtext="Come back later"
+          emptyStateSubtext="Check back later"
           collectionType="all_events"
           limit={6}
           page={1}

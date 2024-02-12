@@ -1,9 +1,4 @@
 "use client";
-
-import { useState, useEffect } from "react";
-import { generateClient } from "aws-amplify/data";
-import type { Schema } from "@/amplify/data/resource";
-import { useAuthStore } from "@/hooks/state/authStore";
 import { useToast } from "../ui/use-toast";
 import { Button } from "../ui/button";
 
@@ -13,7 +8,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -21,9 +15,7 @@ import {
 } from "../ui/form";
 import { Input } from "../ui/input";
 import { EventType } from "@/amplify/data/resource";
-
-// generate your data client using the Schema from your backend
-const client = generateClient<Schema>();
+import { awsclient } from "@/lib/utils";
 
 const formSchema = z.object({
   title: z.string(),
@@ -54,7 +46,7 @@ export default function EventForm() {
     isFree,
   }: EventType) {
     try {
-      const { errors, data: newEvent } = await client.models.Event.create({
+      const { errors, data: newEvent } = await awsclient.models.Event.create({
         title,
         description,
         imageUrl,
@@ -67,7 +59,6 @@ export default function EventForm() {
       toast({
         title: "Event created!",
         description: `Event Id :: ${newEvent.id}`,
-        variant: "default",
         duration: 10000,
       });
     } catch (error) {
@@ -213,7 +204,7 @@ export default function EventForm() {
               </FormItem>
             )}
           />
-          {/* TODO: startDateTime, endDateTime, and isFree */}
+          {/* TODO: createdAt, startDateTime, endDateTime, and isFree */}
           <Button type="submit" className="w-full">
             Submit
           </Button>

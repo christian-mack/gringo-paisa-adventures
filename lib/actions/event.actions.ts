@@ -23,6 +23,7 @@ export async function deleteEvent({
   }
 }
 
+// TODO: complete this functionality
 export async function updateEvent({
   eventId,
   updatedEventDetails,

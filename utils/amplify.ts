@@ -17,9 +17,6 @@ export const cookiesClient = generateServerClientUsingCookies<Schema>({
   cookies,
 });
 
-// it's possible I won't need this and only need the cookiesClient
-export const publicClient = generateClient<Schema>();
-
 export async function AuthGetCurrentUserServer() {
   try {
     const currentUser = await runWithAmplifyServerContext({

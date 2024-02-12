@@ -624,7 +624,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "QuerygetEventauth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/70eb21f5725a54e724b59decd74dbf2943ebfa0372258cc221dfbac95f306637.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f3b5693c85c0350602ff58529449bb73db5712a560bffb004699add2731a3931.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -814,7 +814,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "QuerylistEventsauth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/70eb21f5725a54e724b59decd74dbf2943ebfa0372258cc221dfbac95f306637.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f3b5693c85c0350602ff58529449bb73db5712a560bffb004699add2731a3931.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -1648,7 +1648,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "SubscriptiononCreateEventauth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f2ce286c9b91808b3b7d22d1f3e5e1dfd47c10d63bb8ae91c32f8d05a7a9854e.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/0c10cb468abde9b2234d76f8e7f3fccc0b4cd9f48e9fe916f14e503cd450a47a.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -1779,7 +1779,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "SubscriptiononUpdateEventauth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f2ce286c9b91808b3b7d22d1f3e5e1dfd47c10d63bb8ae91c32f8d05a7a9854e.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/0c10cb468abde9b2234d76f8e7f3fccc0b4cd9f48e9fe916f14e503cd450a47a.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -1910,7 +1910,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "SubscriptiononDeleteEventauth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f2ce286c9b91808b3b7d22d1f3e5e1dfd47c10d63bb8ae91c32f8d05a7a9854e.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/0c10cb468abde9b2234d76f8e7f3fccc0b4cd9f48e9fe916f14e503cd450a47a.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },

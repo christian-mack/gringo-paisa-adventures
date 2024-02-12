@@ -1,16 +1,13 @@
+import { AuthUser } from "aws-amplify/auth";
 import { create } from "zustand";
 
 interface UserState {
-  userId: string;
-  username: string;
-  isAuthenticated: boolean;
-  setUserAuth: (newAuthState: boolean) => void;
+  setUserAuth: (newAuthState: AuthUser) => void;
+  user: AuthUser | null;
 }
 
 export const useAuthStore = create<UserState>()((set) => ({
-  userId: "",
-  username: "",
-  isAuthenticated: false,
-  setUserAuth: (newAuthState) =>
-    set((state) => ({ isAuthenticated: newAuthState })),
+  user: null,
+  setUserAuth: (newAuthState: AuthUser) =>
+    set((state) => ({ user: newAuthState })),
 }));

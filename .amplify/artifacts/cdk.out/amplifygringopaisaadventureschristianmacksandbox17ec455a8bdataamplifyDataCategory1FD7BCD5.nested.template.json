@@ -624,7 +624,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "QuerygetCategoryauth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/75cb84d5091df296624e2e648b3488ecf28b5e4b5ab6d499a2cedd009d43e762.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f3b5693c85c0350602ff58529449bb73db5712a560bffb004699add2731a3931.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -814,7 +814,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "QuerylistCategoriesauth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/75cb84d5091df296624e2e648b3488ecf28b5e4b5ab6d499a2cedd009d43e762.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f3b5693c85c0350602ff58529449bb73db5712a560bffb004699add2731a3931.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -1024,7 +1024,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "MutationcreateCategoryauth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/2304bc8894ad345ae19f5222656133b07126326f67608e74b2c91f91a422d2be.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/70b6288231178fc4e9ae029a9a06b86181702875a2055f498231b06a27d19420.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -1246,7 +1246,7 @@
      "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
     },
     "ResponseMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/dbcc8ff7ca6e7b8feed77dc84f0368032ec2840bb33fc57bdb026974b4c8ac74.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/308a487678af8c7cfb58ad50ada2d0054c6ad53837588209d7274d10185bc79f.vtl"
     }
    },
    "DependsOn": [
@@ -1450,7 +1450,7 @@
      "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
     },
     "ResponseMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fad9b5a2235f059e9c3fc271bd536909d606f991a4b49568542f8290607e57e0.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/b2fcea30c3ec12ed0a578aaa1157b50ba473991d002dc784d5da101d3396b772.vtl"
     }
    },
    "DependsOn": [
@@ -1622,7 +1622,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "SubscriptiononCreateCategoryauth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f2ce286c9b91808b3b7d22d1f3e5e1dfd47c10d63bb8ae91c32f8d05a7a9854e.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/0c10cb468abde9b2234d76f8e7f3fccc0b4cd9f48e9fe916f14e503cd450a47a.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -1753,7 +1753,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "SubscriptiononUpdateCategoryauth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f2ce286c9b91808b3b7d22d1f3e5e1dfd47c10d63bb8ae91c32f8d05a7a9854e.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/0c10cb468abde9b2234d76f8e7f3fccc0b4cd9f48e9fe916f14e503cd450a47a.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -1884,7 +1884,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "SubscriptiononDeleteCategoryauth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f2ce286c9b91808b3b7d22d1f3e5e1dfd47c10d63bb8ae91c32f8d05a7a9854e.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/0c10cb468abde9b2234d76f8e7f3fccc0b4cd9f48e9fe916f14e503cd450a47a.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
