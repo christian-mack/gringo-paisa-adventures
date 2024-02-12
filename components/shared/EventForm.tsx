@@ -32,7 +32,7 @@ const formSchema = z.object({
   imageUrl: z.string(),
   price: z.string(),
   url: z.string(),
-  createdAt: z.date(),
+  category: z.string(),
   startDateTime: z.date(),
   endDateTime: z.date(),
   isFree: z.boolean().default(false),
@@ -48,7 +48,7 @@ export default function EventForm() {
     imageUrl,
     price,
     url,
-    createdAt,
+    category,
     startDateTime,
     endDateTime,
     isFree,
@@ -61,6 +61,7 @@ export default function EventForm() {
         location,
         price,
         url,
+        category,
         isFree,
       });
       toast({
@@ -89,7 +90,7 @@ export default function EventForm() {
       imageUrl: "",
       price: "",
       url: "",
-      createdAt: new Date(),
+      category: "",
       startDateTime: new Date(),
       endDateTime: new Date(),
       isFree: false,
@@ -115,9 +116,6 @@ export default function EventForm() {
                     {...field}
                   />
                 </FormControl>
-                <FormDescription>
-                  {/* TODO: Render error message */}
-                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -134,9 +132,6 @@ export default function EventForm() {
                     {...field}
                   />
                 </FormControl>
-                <FormDescription>
-                  {/* TODO: Render error message */}
-                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -153,9 +148,6 @@ export default function EventForm() {
                     {...field}
                   />
                 </FormControl>
-                <FormDescription>
-                  {/* TODO: Render error message */}
-                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -172,9 +164,6 @@ export default function EventForm() {
                     {...field}
                   />
                 </FormControl>
-                <FormDescription>
-                  {/* TODO: Render error message */}
-                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -191,9 +180,6 @@ export default function EventForm() {
                     {...field}
                   />
                 </FormControl>
-                <FormDescription>
-                  {/* TODO: Render error message */}
-                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -210,14 +196,24 @@ export default function EventForm() {
                     {...field}
                   />
                 </FormControl>
-                <FormDescription>
-                  {/* TODO: Render error message */}
-                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
           />
-          {/* TODO: createdAt, startDateTime, endDateTime, and isFree */}
+          <FormField
+            control={form.control}
+            name="category"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Category</FormLabel>
+                <FormControl>
+                  <Input placeholder="Enter your event's category" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          {/* TODO: startDateTime, endDateTime, and isFree */}
           <Button type="submit" className="w-full">
             Submit
           </Button>

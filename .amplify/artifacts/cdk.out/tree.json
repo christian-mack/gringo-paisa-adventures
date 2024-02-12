@@ -248,71 +248,6 @@
                           "fqn": "aws-cdk-lib.aws_iam.CfnRole",
                           "version": "2.121.1"
                         }
-                      },
-                      "DefaultPolicy": {
-                        "id": "DefaultPolicy",
-                        "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifyAuth/authenticatedUserRole/DefaultPolicy",
-                        "children": {
-                          "Resource": {
-                            "id": "Resource",
-                            "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifyAuth/authenticatedUserRole/DefaultPolicy/Resource",
-                            "attributes": {
-                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
-                              "aws:cdk:cloudformation:props": {
-                                "policyDocument": {
-                                  "Statement": [
-                                    {
-                                      "Action": [
-                                        "s3:GetObject*",
-                                        "s3:GetBucket*",
-                                        "s3:List*",
-                                        "s3:DeleteObject*",
-                                        "s3:PutObject",
-                                        "s3:PutObjectLegalHold",
-                                        "s3:PutObjectRetention",
-                                        "s3:PutObjectTagging",
-                                        "s3:PutObjectVersionTagging",
-                                        "s3:Abort*"
-                                      ],
-                                      "Effect": "Allow",
-                                      "Resource": [
-                                        {
-                                          "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackNestedStackBucketStackNestedStackResource2E0A9681Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn"
-                                        },
-                                        {
-                                          "Fn::Join": [
-                                            "",
-                                            [
-                                              {
-                                                "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackNestedStackBucketStackNestedStackResource2E0A9681Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn"
-                                              },
-                                              "/*"
-                                            ]
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "Version": "2012-10-17"
-                                },
-                                "policyName": "amplifyAuthauthenticatedUserRoleDefaultPolicy82E52873",
-                                "roles": [
-                                  {
-                                    "Ref": "amplifyAuthauthenticatedUserRoleD8DA3689"
-                                  }
-                                ]
-                              }
-                            },
-                            "constructInfo": {
-                              "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                              "version": "2.121.1"
-                            }
-                          }
-                        },
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_iam.Policy",
-                          "version": "2.121.1"
-                        }
                       }
                     },
                     "constructInfo": {
@@ -364,64 +299,6 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                          "version": "2.121.1"
-                        }
-                      },
-                      "DefaultPolicy": {
-                        "id": "DefaultPolicy",
-                        "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifyAuth/unauthenticatedUserRole/DefaultPolicy",
-                        "children": {
-                          "Resource": {
-                            "id": "Resource",
-                            "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifyAuth/unauthenticatedUserRole/DefaultPolicy/Resource",
-                            "attributes": {
-                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
-                              "aws:cdk:cloudformation:props": {
-                                "policyDocument": {
-                                  "Statement": [
-                                    {
-                                      "Action": [
-                                        "s3:GetObject*",
-                                        "s3:GetBucket*",
-                                        "s3:List*"
-                                      ],
-                                      "Effect": "Allow",
-                                      "Resource": [
-                                        {
-                                          "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackNestedStackBucketStackNestedStackResource2E0A9681Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn"
-                                        },
-                                        {
-                                          "Fn::Join": [
-                                            "",
-                                            [
-                                              {
-                                                "Ref": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackNestedStackBucketStackNestedStackResource2E0A9681Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn"
-                                              },
-                                              "/*"
-                                            ]
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "Version": "2012-10-17"
-                                },
-                                "policyName": "amplifyAuthunauthenticatedUserRoleDefaultPolicy1AB22815",
-                                "roles": [
-                                  {
-                                    "Ref": "amplifyAuthunauthenticatedUserRole2B524D9E"
-                                  }
-                                ]
-                              }
-                            },
-                            "constructInfo": {
-                              "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                              "version": "2.121.1"
-                            }
-                          }
-                        },
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_iam.Policy",
                           "version": "2.121.1"
                         }
                       }
@@ -518,14 +395,6 @@
                   "version": "10.3.0"
                 }
               },
-              "reference-to-amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackNestedStackBucketStackNestedStackResource2E0A9681Outputs.amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn": {
-                "id": "reference-to-amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackNestedStackBucketStackNestedStackResource2E0A9681Outputs.amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn",
-                "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/reference-to-amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackNestedStackBucketStackNestedStackResource2E0A9681Outputs.amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn",
-                "constructInfo": {
-                  "fqn": "aws-cdk-lib.CfnParameter",
-                  "version": "2.121.1"
-                }
-              },
               "amplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthUserPool1EC17B2ARef": {
                 "id": "amplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthUserPool1EC17B2ARef",
                 "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthUserPool1EC17B2ARef",
@@ -582,14 +451,6 @@
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::CloudFormation::Stack",
                   "aws:cdk:cloudformation:props": {
-                    "parameters": {
-                      "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackNestedStackBucketStackNestedStackResource2E0A9681Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn": {
-                        "Fn::GetAtt": [
-                          "BucketStackD7446A8B",
-                          "Outputs.amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn"
-                        ]
-                      }
-                    },
                     "templateUrl": {
                       "Fn::Join": [
                         "",
@@ -606,7 +467,7 @@
                           {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "/923c35e026c9bee2dac850eb38acd8d54e783b98da1fa8aae9f0c508812f416c.json"
+                          "/1049e0b9baa021e706ccedc9e6f3a8a66df25038cc7803292e41c4dfe0487032.json"
                         ]
                       ]
                     }
@@ -757,7 +618,7 @@
                               ]
                             },
                             "definitionS3Location": {
-                              "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/214f6240d96cff323d10043a6bf003ad33bca18797fcec064e160b5668da9225.graphql"
+                              "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c76c8fdc82f34d91e8ced9091ce9356f053618748030bbd35a5b49818630e8a7.graphql"
                             }
                           }
                         },
@@ -3675,7 +3536,7 @@
                                 "functionVersion": "2018-05-29",
                                 "name": "MutationcreateEventauth0Function",
                                 "requestMappingTemplateS3Location": {
-                                  "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/06764ae90b542a75dab2b61a9e2a1b2c5b2683f06c20d8c2aac813f2726d0dd3.vtl"
+                                  "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e99478b9ce81b5e1a86ed94b685b7aa539ec68270739adcd622e1ce39038f0cf.vtl"
                                 },
                                 "responseMappingTemplate": "$util.toJson({})"
                               }
@@ -4162,7 +4023,7 @@
                                   "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
                                 },
                                 "responseMappingTemplateS3Location": {
-                                  "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4dac6cbe50322a95094c35e63af28043f710a80007ec2b479c958f8c53a2d6b7.vtl"
+                                  "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/b8dbde66aeda0272ac412b2d1e8b64e25921f184682a77fcf2601f639fa6ae0f.vtl"
                                 }
                               }
                             },
@@ -6012,7 +5873,7 @@
                                   {
                                     "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                                   },
-                                  "/7d95966452436a66a0881fb7ac1ec8f0d6132e58932a4b541ade830406400ecb.json"
+                                  "/3a3273b888cfac667cfcfca6e62f5aa48e8b1e411323a0a421a66cdcd4defb6a.json"
                                 ]
                               ]
                             }
@@ -10426,7 +10287,7 @@
                           {
                             "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                           },
-                          "/42893d1e1a278bdc87182bc9d59dc7b8755f8bfcab843a42971a71fbae367ec1.json"
+                          "/349b2cd8c1ed1b1153d993b373a639adce4b84dd68265ae9dde8cffc2c31951e.json"
                         ]
                       ]
                     }
@@ -10489,122 +10350,6 @@
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.121.1"
-            }
-          },
-          "BucketStack": {
-            "id": "BucketStack",
-            "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack",
-            "children": {
-              "Bucket": {
-                "id": "Bucket",
-                "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack/Bucket",
-                "children": {
-                  "Resource": {
-                    "id": "Resource",
-                    "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack/Bucket/Resource",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
-                      "aws:cdk:cloudformation:props": {
-                        "publicAccessBlockConfiguration": {
-                          "blockPublicAcls": true,
-                          "blockPublicPolicy": true,
-                          "ignorePublicAcls": true,
-                          "restrictPublicBuckets": true
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_s3.CfnBucket",
-                      "version": "2.121.1"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "aws-cdk-lib.aws_s3.Bucket",
-                  "version": "2.121.1"
-                }
-              },
-              "CDKMetadata": {
-                "id": "CDKMetadata",
-                "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack/CDKMetadata",
-                "children": {
-                  "Default": {
-                    "id": "Default",
-                    "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack/CDKMetadata/Default",
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.CfnResource",
-                      "version": "2.121.1"
-                    }
-                  },
-                  "Condition": {
-                    "id": "Condition",
-                    "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack/CDKMetadata/Condition",
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.CfnCondition",
-                      "version": "2.121.1"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "constructs.Construct",
-                  "version": "10.3.0"
-                }
-              },
-              "amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn": {
-                "id": "amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn",
-                "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack/amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn",
-                "constructInfo": {
-                  "fqn": "aws-cdk-lib.CfnOutput",
-                  "version": "2.121.1"
-                }
-              }
-            },
-            "constructInfo": {
-              "fqn": "aws-cdk-lib.NestedStack",
-              "version": "2.121.1"
-            }
-          },
-          "BucketStack.NestedStack": {
-            "id": "BucketStack.NestedStack",
-            "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack.NestedStack",
-            "children": {
-              "BucketStack.NestedStackResource": {
-                "id": "BucketStack.NestedStackResource",
-                "path": "amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack.NestedStack/BucketStack.NestedStackResource",
-                "attributes": {
-                  "aws:cdk:cloudformation:type": "AWS::CloudFormation::Stack",
-                  "aws:cdk:cloudformation:props": {
-                    "templateUrl": {
-                      "Fn::Join": [
-                        "",
-                        [
-                          "https://s3.",
-                          {
-                            "Ref": "AWS::Region"
-                          },
-                          ".",
-                          {
-                            "Ref": "AWS::URLSuffix"
-                          },
-                          "/",
-                          {
-                            "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
-                          },
-                          "/6022b5cb41998329eb4741c55b1504f9d29ebb45e95f0bf4b5a8a93d01dc3549.json"
-                        ]
-                      ]
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "aws-cdk-lib.CfnStack",
-                  "version": "2.121.1"
-                }
-              }
-            },
-            "constructInfo": {
-              "fqn": "constructs.Construct",
-              "version": "10.3.0"
             }
           },
           "CDKMetadata": {

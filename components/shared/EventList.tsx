@@ -1,4 +1,4 @@
-import { cookiesClient } from "@/utils/amplifyUtils";
+import { cookiesClient } from "@/utils/amplify";
 
 export default async function EventList() {
   const { data: events } = await cookiesClient.models.Event.list();
@@ -16,7 +16,6 @@ export default async function EventList() {
               <div>{event.description}</div>
               <div>{event.location}</div>
               <div>{event.price}</div>
-              <div>{event.createdAt}</div>
               <div>{event.startDateTime}</div>
               <div>{event.endDateTime}</div>
               <div>{event.isFree}</div>

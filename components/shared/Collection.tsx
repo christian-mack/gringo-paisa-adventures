@@ -20,7 +20,7 @@ export default async function Collection({
   collectionType,
   urlParamName,
 }: CollectionProps) {
-  console.log(data);
+  // console.log(" \n \n COLLECTION DATA :: \n \n ", data);
   return (
     <>
       {data.length > 0 ? (

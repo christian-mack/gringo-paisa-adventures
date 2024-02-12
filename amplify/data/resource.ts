@@ -7,7 +7,6 @@ export interface EventType {
   location: string;
   imageUrl: string;
   category: string;
-  createdAt: Date;
   startDateTime: Date;
   endDateTime: Date;
   price: string;
@@ -29,7 +28,6 @@ const schema = a.schema({
       category: a.string(),
       price: a.string(),
       url: a.url(),
-      createdAt: a.datetime(),
       startDateTime: a.datetime(),
       endDateTime: a.datetime(),
       isFree: a.boolean().default(false),

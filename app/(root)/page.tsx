@@ -1,11 +1,14 @@
 import Collection from "@/components/shared/Collection";
 import { Button } from "@/components/ui/button";
-import { AuthGetCurrentUserServer, cookiesClient } from "@/utils/amplifyUtils";
+import { AuthGetCurrentUserServer, cookiesClient } from "@/utils/amplify";
 import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home() {
   const { data: events, errors } = await cookiesClient.models.Event.list();
+  const user = await AuthGetCurrentUserServer();
+
+  console.log(user);
 
   return (
     <>

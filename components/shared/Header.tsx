@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 import MainNav from "./MainNav";
 import MobileNav from "./MobileNav";
 import Logout from "@/components/Logout";
-import { AuthGetCurrentUserServer } from "@/utils/amplifyUtils";
+import { AuthGetCurrentUserServer } from "@/utils/amplify";
 
 export default async function Header() {
   const user = await AuthGetCurrentUserServer();

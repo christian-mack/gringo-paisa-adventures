@@ -1,5 +1,4 @@
-import { uploadData } from "@aws-amplify/storage";
-import { cookiesClient } from "@/utils/amplifyUtils";
+import { cookiesClient } from "@/utils/amplify";
 import { revalidatePath } from "next/cache";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
@@ -16,13 +15,8 @@ export default async function EventForm() {
     const price = data.get("price") as string;
     const url = data.get("url") as string;
     const file = data.get("image") as Blob;
-    // const startDateTime = data.get("startDateTime") as string;
-    // const endDateTime = data.get("endDateTime") as string;
-
-    const result = await uploadData({
-      key: imageUrl,
-      data: file,
-    });
+    const startDateTime = data.get("startDateTime") as string;
+    const endDateTime = data.get("endDateTime") as string;
 
     await cookiesClient.models.Event.create({
       title,
@@ -32,8 +26,8 @@ export default async function EventForm() {
       category,
       price,
       url,
-      // startDateTime,
-      // endDateTime,
+      startDateTime,
+      endDateTime,
     });
 
     revalidatePath("/");
@@ -51,7 +45,7 @@ export default async function EventForm() {
         <Input type="text" name="price" placeholder="price" />
         <Input type="text" name="url" placeholder="url" />
         <Input type="file" name="image" />
-        {/* <Input
+        <Input
           type="datetime-local"
           name="startDateTime"
           placeholder="startDateTime"
@@ -60,7 +54,7 @@ export default async function EventForm() {
           type="datetime-local"
           name="endDateTime"
           placeholder="endDateTime"
-        /> */}
+        />
         <Button type="submit">Create</Button>
       </form>
     </div>

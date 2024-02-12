@@ -18,7 +18,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/215a2f0e6fbafe7f316ecc7f84aba8cdf00fbbdf386ece1e6d0e3dc358e9c72b.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3a0f191bb83c2d99110438c8cecf85fe3ebc0bc47b2bec3596f7c0d427189639.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -70,22 +70,10 @@
             "data": "amplifyAuthauthenticatedUserRoleD8DA3689"
           }
         ],
-        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifyAuth/authenticatedUserRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifyAuthauthenticatedUserRoleDefaultPolicy82E52873"
-          }
-        ],
         "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthunauthenticatedUserRole2B524D9E"
-          }
-        ],
-        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifyAuth/unauthenticatedUserRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifyAuthunauthenticatedUserRoleDefaultPolicy1AB22815"
           }
         ],
         "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifyAuth/IdentityPoolRoleAttachment": [
@@ -104,12 +92,6 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
-          }
-        ],
-        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/reference-to-amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackNestedStackBucketStackNestedStackResource2E0A9681Outputs.amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackNestedStackBucketStackNestedStackResource2E0A9681Outputsamplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn"
           }
         ],
         "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/auth/amplifygringopaisaadventureschristianmacksandbox17ec455a8bauthamplifyAuthUserPool1EC17B2ARef": [
@@ -1778,36 +1760,6 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "awsAppsyncAdditionalAuthenticationTypes"
-          }
-        ],
-        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack/Bucket/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "Bucket83908E77"
-          }
-        ],
-        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack/CDKMetadata/Default": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CDKMetadata"
-          }
-        ],
-        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack/CDKMetadata/Condition": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CDKMetadataAvailable"
-          }
-        ],
-        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack/amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "amplifygringopaisaadventureschristianmacksandbox17ec455a8bBucketStackBucket199DA1F8Arn"
-          }
-        ],
-        "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/BucketStack.NestedStack/BucketStack.NestedStackResource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "BucketStackD7446A8B"
           }
         ],
         "/amplify-gringopaisaadventures-christianmack-sandbox-17ec455a8b/CDKMetadata/Default": [

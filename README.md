@@ -10,8 +10,9 @@ FEATURES IN PROGRESS:
   - [x] Date picker for the create event form
   - [x] File uploader for images - aws s3 bucket or uploadThing
   - [x] Revisit/tighten zod valitaions
-- [ ] event details page
-- [ ] related events page
+- [x] event details page
+  - [x] related events collection
+  - [x] server action for related events
 - [ ] stripe checkout
 - [ ] pagination
 - [ ] user profile page
